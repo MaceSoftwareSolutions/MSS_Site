@@ -1,0 +1,270 @@
+/* MARGIN BETWEEN SECTIONS*/
+header {
+    margin-bottom: 20px;
+}
+
+footer {
+    margin-top: 20px;
+}
+
+
+section {
+    margin-bottom: 20px;
+}
+
+/*MAIN*/
+
+body {
+    font-family: 'Lato-Regular', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header, footer {
+    background-color: aqua;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 10px;
+    
+
+}
+
+header img {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+    vertical-align: middle;
+    
+}
+
+header h1 {
+    font-size: 1.5em;
+    color: black;
+    display: inline-block;
+    vertical-align: middle;
+    
+}
+
+main {
+    flex: 1;
+    margin: 0 10px;
+}
+
+footer {
+    color: black;
+    text-align: center;
+    
+    
+    font-size: 14px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Lato-Bold', sans-serif;
+}
+
+@font-face {
+    font-family: 'Lato-Bold';
+    src: url('assets/fonts/Lato-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lato-Regular';
+    src: url('assets/fonts/Lato-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*PROJECT*/
+
+.project {
+    display: flex;
+    align-items: center;
+    
+}
+
+.project img {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+
+
+
+/* GET IN TOUCH*/
+
+
+
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    
+}
+
+label[for="email"],
+label[for="message"] {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+
+
+button[type="submit"] {
+    padding: 8px 20px;
+    background-color: aqua;
+    color: black;
+    border: 2px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    margin-top: 10px;
+   
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+    border-color: #000;
+}
+
+/*PROGRESS BARS*/
+
+.progress-indicator {
+    display: inline-block;
+    width: 100px;
+    height: 8px;
+   
+    background: linear-gradient(to right, green 70%, grey 50%);
+    border-radius: 2px;
+    margin-left: 5px;
+}
+
+.progress-indicator-full {
+    display: inline-block;
+    width: 100px;
+    height: 8px;
+    
+    background: green;
+    border-radius: 2px;
+    margin-left: 5px;
+}
+
+
+/*DARK MODE STYLES*/
+
+#toggle-dark-mode {
+    /* Adjust padding to make the button smaller */
+    background-color: aqua;
+    color: black;
+    border: 2px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+   
+     /* Adjust this value as needed */
+}
+
+
+#toggle-dark-mode img {
+    width: 20px; /* Adjust image size */
+    height: 20px; /* Adjust image size */
+}
+
+body.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+.dark-mode .card {
+    border-color: #666;
+    background-color: #333;
+    color: #fff;
+}
+
+.dark-mode .card-header {
+    background-color: #333;
+    border-bottom-color: #333;
+    border-bottom: 1px solid #fff;
+}
+
+.dark-mode  {
+    color: #fff;
+}
+
+.dark-mode .projects-section {
+    background-color: #fff;
+}
+
+.dark-mode .projects-section .project-info {
+    color: #fff;
+}
+
+.dark-mode .projects-section .project img {
+    border-color: #fff;
+}
+
+/*CARD STYLES*/
+
+.card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f5f5f5;
+    border-bottom: 1px solid #ccc;
+    padding: 5px 10px; /* Adjust the padding-top and padding-bottom values as needed */
+}
+
+
+
+
+/*SWITCH*/
+
+.toggle-container {
+    position: relative;
+    width: 24px; /* Adjust width as needed */
+    height: 24px; /* Adjust height as needed */
+    margin-left: auto;
+    margin-bottom: 20px; /* Move the container to the right */
+}
+
+.toggle-container img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: opacity 0.3s;
+    top: -5px; /* Adjust this value to move the images up */
+}
+
+.toggle-container .moon {
+    opacity: 0; /* Initially hide the moon icon */
+}
+
+
+input[type="checkbox"] {
+    display: none; /* Hide the checkbox */
+}
+
+input[type="checkbox"]:checked + .toggle-container .sun {
+    opacity: 0; /* Hide the sun icon when checkbox is checked */
+}
+
+input[type="checkbox"]:checked + .toggle-container .moon {
+    opacity: 1; /* Show the moon icon when checkbox is checked */
+}
